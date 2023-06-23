@@ -42,6 +42,12 @@ public class CardViewPagerActivity extends AppCompatActivity {
     Button negativeDialog;
     public static AlertDialog.Builder dialogBuilder;
     public static AlertDialog alertDialog;
+
+
+
+
+
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
