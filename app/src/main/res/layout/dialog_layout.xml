@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/rel1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/curv"
+        android:backgroundTint="@color/black">
+
+        <RelativeLayout
+
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_above="@+id/textview1"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/curv"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="250dp"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="Your pet name(heading)"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_above="@+id/location"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img0"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="392dp"
+            android:layout_height="112dp"
+            android:layout_above="@id/textview"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="Pet, any animal kept by human beings as a source of companionship and pleasure. While a pet is generally kept for the pleasure that it can give to its owner, often, especially with horses, dogs, and cats, as well as with some other domesticated animals, this pleasure appears to be mutual."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="392dp"
+            android:layout_height="112dp"
+            android:layout_above="@id/relbuy"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="All Other Datails Related Dog."
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/relbuy"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/buy"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/curv"
+                android:gravity="center"
+                android:text="Buy"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:visibility="gone"
+        android:id="@+id/rel2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/curv"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:id="@+id/rel_date_had"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <TextView
+                android:id="@+id/date_had_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="  Select Date"
+                android:textColor="@color/colorAccent"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/date_had_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_had_txt"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="  select your pet buy date "
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/next"
+                android:backgroundTint="@color/colorAccent" />
+
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/rel_date_had"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:layout_below="@+id/rel_date_had"
+            android:id="@+id/date_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <View
+            android:layout_below="@+id/date_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+        <CalendarView
+            android:layout_below="@+id/date_view"
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"  />
+        <RelativeLayout
+            android:layout_below="@+id/calendar"
+            android:id="@+id/rel_prize"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/date_had_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="  Select Prize"
+                android:textColor="@color/colorAccent"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/date_had_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date_had_txt"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="  select your pet prize "
+                android:textSize="14dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/date_view"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:layout_toLeftOf="@+id/next"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/next"
+                android:backgroundTint="@color/colorAccent" />
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/rel_prize"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:layout_below="@+id/rel_prize"
+            android:id="@+id/prize_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_below="@+id/prize_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+        <io.feeeei.circleseekbar.CircleSeekBar
+            android:layout_marginTop="15dp"
+            android:id="@+id/seekbar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/prize_view"
+            android:layout_centerHorizontal="true"
+            app:wheel_max_process="100000" />
+        <View
+            android:layout_below="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/seekbar"
+            android:id="@+id/tv_prize"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_below="@+id/tv_prize"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_prize"
+            android:id="@+id/PrizeDone"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:background="@drawable/curv"
+            android:gravity="center"
+            android:text="Done Prize"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/PrizeDone"
+            android:id="@+id/Submit"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:background="@drawable/curv"
+            android:gravity="center"
+            android:text="Submit"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
